@@ -1,0 +1,18 @@
+.short-about{
+    display: flex;
+    padding: 150px 5% !important;
+}
+
+.short-about-item{
+    width: 50%;
+    padding: 5% !important;
+    background-position: center;
+}
+
+.ord-button{
+    background-color: #282828;
+    border-radius: 0;
+    border: none;
+    width: 100%;
+    padding: 20px;
+}

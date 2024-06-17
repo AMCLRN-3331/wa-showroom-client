@@ -1,0 +1,158 @@
+/* сюда красоту писать */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:Verdana, Geneva, Tahoma, sans-serif
+}
+
+.row{
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.row>*{
+    margin: 0;
+    padding: 0 !important;
+}
+
+
+
+.Main-NavBar{
+    padding: 15px 5%;
+    background-color: #28282898;
+    flex-wrap: wrap !important;
+    justify-content: space-between !important;
+    
+}
+
+.navbar-brand, .nav-link{
+    color: white;
+}
+
+.navbar-nav{
+    justify-content: end;
+}
+
+/*video*/
+
+.ground{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(12,3,51,0.3), rgba(12,3,51,0.3));
+    position: relative;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 20px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #28282898;
+}
+
+.header ul li{
+    list-style: none;
+    display: inline-block;
+    margin-left: 40px;
+}
+
+.header ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.0rem;
+    text-transform: uppercase;
+    font-weight: lighter;
+    letter-spacing: 5px;
+}
+
+.logo{
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    letter-spacing: 0;
+}
+
+.back-video{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+.content{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    padding: 20px 8%;
+}
+
+.head-title{
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.head-title h1{
+    color: white;
+    font-size: 3.5rem;
+    margin-bottom: 8%;
+}
+
+.head-title h2{
+    color: white;
+    font-size: 1.5rem;
+    font-weight: lighter;
+    margin-bottom: 8%;
+}
+
+.order-button{
+    text-decoration: none;
+    color: #282828;
+    font-size: 1.0rem;
+    text-transform: uppercase;
+    font-weight: lighter;
+    letter-spacing: 5px;
+    background-color: white;
+    padding: 8px 20px;
+}
+
+.info-button{
+    text-decoration: none;
+    color: #282828;
+    font-size: 1.0rem;
+    text-transform: uppercase;
+    font-weight: lighter;
+    letter-spacing: 5px;
+    background-color: white;
+    padding: 8px 20px;
+}
+
+/**/
+
+.Main-content{
+    padding: 15px 5%;
+}
+
+
+.brand-filter{
+    padding: 0 20%;
+}
+
+.pagination-filter{
+    padding: 0 5%;
+}
+
+.footer-bar{
+    padding: 150px 5%;
+}
