@@ -22,7 +22,7 @@ const NavBar = observer(() => {
 
         <Navbar className='Main-NavBar' fixed='top'>
             
-                <Navbar.Brand href="/">WHITEAUTO</Navbar.Brand>
+                <Navbar.Brand href="/">WA</Navbar.Brand>
                 
                 <Nav>
                     <Nav.Link href="/catalog">Каталог</Nav.Link>

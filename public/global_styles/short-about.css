@@ -8,11 +8,17 @@
     padding: 5% !important;
     background-position: center;
 }
-
+.h1About{
+    padding-bottom: 10%;
+    margin-top: -40px;
+}
 .ord-button{
     background-color: #282828;
     border-radius: 0;
     border: none;
     width: 100%;
     padding: 20px;
+}
+.ord-button:hover{
+    
 }
