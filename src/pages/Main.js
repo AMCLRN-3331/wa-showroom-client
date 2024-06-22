@@ -8,6 +8,7 @@ import Pages from "../components/Pages";
 import Video from "../components/Video";
 import ShortAbout from "../components/ShortAbout";
 import BookingForm from "../components/BookingForm";
+import Specification from "../components/Specification";
 
 const Main = observer(() => {
     const { auto } = useContext(Context);
@@ -34,6 +35,8 @@ console.log(auto.page);
         <div>
             <Video />
             <ShortAbout />
+            <Specification />
+            {/* <h2 style={{margin: 'auto'}}><b>Новые модели</b></h2> */}
             <AutoList />
         <div className="Main-content">
             {/* <BrandBar /> */}

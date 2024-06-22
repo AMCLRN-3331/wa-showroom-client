@@ -9,6 +9,7 @@ import CreateGearbox from "../components/modals/CreateGearbox";
 import CreateModel from "../components/modals/CreateModel";
 import { fetchBookings } from "../http/autoAPI";
 import { Context } from "..";
+import CreateSpec from "../components/modals/CreateSpec";
 
 const Admin = () => {
     const [autoVisible, setAutoVisible] = useState(false);
@@ -17,6 +18,7 @@ const Admin = () => {
     const [colorVisible, setColorVisible] = useState(false);
     const [gearboxVisible, setGearboxVisible] = useState(false);
     const [modelVisible, setModelVisible] = useState(false);
+    const [specVisible, setSpecVisible] = useState(false);
 
     const { booking } = useContext(Context);
 
@@ -25,40 +27,24 @@ const Admin = () => {
     })
 
     return (
-        <Container className="column" style={{ marginTop: 250, marginBottom: 250 }} >
+        <Container className="admin-main" style={{ marginTop: 250, marginBottom: 250 }} >
             <h1>Страница администратора</h1>
-            <Button onClick={() => setAutoVisible(true)}>Добавить авто</Button>
-            <Button onClick={() => setBrandVisible(true)}>Добавить марку</Button>
-            <Button onClick={() => setColorVisible(true)}>Добавить цвет</Button>
-            <Button onClick={() => setBodyVisible(true)}>Добавить кузов</Button>
-            <Button onClick={() => setModelVisible(true)}>Добавить модель</Button>
-            <Button onClick={() => setGearboxVisible(true)}>Добавить коробку</Button>
-            <Button>Зарегистрировать пользователя</Button>
+            <Button className="admin-button" onClick={() => setAutoVisible(true)}>Добавить авто</Button>
+            <Button className="admin-button" onClick={() => setBrandVisible(true)}>Добавить марку</Button>
+            <Button className="admin-button" onClick={() => setColorVisible(true)}>Добавить цвет</Button>
+            <Button className="admin-button" onClick={() => setBodyVisible(true)}>Добавить кузов</Button>
+            <Button className="admin-button" onClick={() => setModelVisible(true)}>Добавить модель</Button>
+            <Button className="admin-button" onClick={() => setGearboxVisible(true)}>Добавить коробку</Button>
+            <Button className="admin-button" onClick={() => setSpecVisible(true)}>Зарегистрировать пользователя</Button>
             <CreateAuto show={autoVisible} onHide={() => setAutoVisible(false)} />
             <CreateBrand show={brandVisible} onHide={() => setBrandVisible(false)} />
             <CreateBody show={bodyVisible} onHide={() => setBodyVisible(false)} />
             <CreateColor show={colorVisible} onHide={() => setColorVisible(false)} />
             <CreateGearbox show={gearboxVisible} onHide={() => setGearboxVisible(false)} />
             <CreateModel show={modelVisible} onHide={() => setModelVisible(false)} />
+                <CreateSpec show={specVisible} onHide={() => setSpecVisible(false)} />
 
-            <Container>
-
-                <Table striped>
-                    <thead>
-                        <tr>
-                            <th>#</th>
-                            <th>Имя</th>
-                            <th>Номер</th>
-                            <th>Время</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {booking.bookings ? booking.bookings.map(item => <tr><td>{item.id}</td><td>{item.name}</td><td>{item.number}</td><td>{item.createdAt}</td></tr>) : <div></div>}
-
-                    </tbody>
-                </Table>
-
-            </Container>
+            
 
         </Container>
 

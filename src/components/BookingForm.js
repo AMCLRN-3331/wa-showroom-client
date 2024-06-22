@@ -14,18 +14,18 @@ const BookingForm = () => {
     }
 
     return (
-        <Container>
-            <h1>Заинтересовал автомобиль?</h1>
-            <h2>Оставьте свои контактные данные и менеджер свяжется с вами в ближайшее время</h2>
+        <Container className="container-booking">
+            <h1 className="h1Booking"><b>Связаться с нами</b> </h1>
+            <p>Оставьте свои контактные данные и менеджер свяжется с вами в ближайшее время</p>
             <Form>
                 <Form>
                     <FormControl
                         value={name}
-                        onChange={e => setName(e.target.value)} className="mt-2" placeholder="Укажите имя" />
+                        onChange={e => setName(e.target.value)} className="mt-2 inputB" placeholder="Представтесь" />
                     <FormControl
                         value={number}
-                        onChange={e => setNumber(e.target.value)} className="mt-2" type="tel" placeholder="Номер телефона" />
-                    <Button className="mt-2 mb-2 ord-button" onClick={addBooking}>Добавить</Button>
+                        onChange={e => setNumber(e.target.value)} className="mt-2 inputB" type="tel" placeholder="Номер телефона" />
+                    <Button className="mt-2 mb-2 ord-button" onClick={addBooking}>Отправить</Button>
                 </Form>
             </Form>
         </Container>

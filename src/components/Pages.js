@@ -14,7 +14,9 @@ const Pages = observer(() => {
     }
 
     return(
+
         <Pagination className="mt-5 pagination-filter">
+            
             {pages.map(page => <Pagination.Item key={page} active={auto.page === page} onClick={() => auto.setPage(page)}>{page}</Pagination.Item>)}
         </Pagination>
     );

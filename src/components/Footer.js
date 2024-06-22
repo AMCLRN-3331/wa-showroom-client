@@ -12,6 +12,7 @@ const Footer = observer(() => {
         user.setUser({});
         user.setIsAuth(false);
         history('/');
+        localStorage.removeItem('token');
     }
     return(
         <Navbar bg="dark" variant="dark" className="footer-bar" >
@@ -19,15 +20,19 @@ const Footer = observer(() => {
             <Navbar.Brand href="/">WHITEAUTO</Navbar.Brand>
             <p style={{color: 'gray'}}>Дипломный проект</p>
                
-                {user.isAuth ? 
+                {user.isAuth && user.user.role === 'ADMIN' ? 
                 <Navbar.Collapse className="justify-content-end">
-                    <Button className="mr-2" variant='outline-light' onClick={() => history('/admin')}>Админка</Button>
-                    <Button className="mr-4" variant='outline-light' onClick={() => logOut()}>Выйти</Button>
+                    <Button className="mr-sm-2" variant='outline-secondary' size="sm" onClick={() => history('/admin')}>Для администратора</Button>
+                    <Button className="mr-sm-2" variant='outline-secondary' size="sm" onClick={() => logOut()}>Выйти</Button>
                 </Navbar.Collapse>
-                :
+                : user.isAuth && user.user.role === 'SPEC' ?
                 <Navbar.Collapse className="justify-content-end">
-                    <Button className="mr-2" variant='outline-light' onClick={() => history('/login')}>Авторизация</Button>
-                </Navbar.Collapse>
+                    <Button className="mr-sm-2" variant='outline-secondary' size="sm" onClick={() => history('/spec')}>Для специалистов</Button>
+                    <Button className="mr-sm-2" variant='outline-secondary' size="sm" onClick={() => logOut()}>Выйти</Button>
+                </Navbar.Collapse>:
+                <Navbar.Collapse className="justify-content-end">
+                    <Button className="mr-sm-2" variant='outline-secondary' size="sm" onClick={() => history('/login')}>Авторизация</Button>
+                </Navbar.Collapse> 
                 }
             
         </Navbar>

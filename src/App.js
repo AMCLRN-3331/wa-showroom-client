@@ -17,8 +17,14 @@ const App = observer(() => {
 
   useEffect(() => {
     check().then(data => {
-      user.setUser(data);
-      user.setIsAuth(data);
+      if(Object.keys(data).length === 0){
+        user.setUser(data);
+      user.setIsAuth(false);
+      } else{
+        user.setUser(data);
+      user.setIsAuth(true);
+      }
+      
     }).finally(() => setLoading(false));
   }, []);
 
@@ -29,7 +35,6 @@ const App = observer(() => {
   return (
     <BrowserRouter>
       <NavBar />
-      
       <AppRouter />
       <Footer />
 

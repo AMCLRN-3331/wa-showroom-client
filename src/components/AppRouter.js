@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 
 import { Routes, Route, Navigate } from 'react-router-dom';
-import { publicRoutes, authRoutes } from "../routes";
+import { publicRoutes, authRoutes, specRoutes } from "../routes";
 import Main from '../pages/Main';
 import { Context } from "..";
 
@@ -10,7 +10,13 @@ const AppRouter = () => {
     return (
         <Routes>
             {
-                user.isAuth && authRoutes.map(({path, Component}) => <Route key={path} path={path} element={<Component/>} exact/>)
+                console.log(user)
+            }
+            {
+                user.user.role === 'ADMIN' && authRoutes.map(({path, Component}) => <Route key={path} path={path} element={<Component/>} exact/>)
+            }
+            {
+                user?.user?.role === 'SPEC' && specRoutes.map(({path, Component}) => <Route key={path} path={path} element={<Component/>} exact/>)
             }
             {
                 publicRoutes.map(({path, Component}) => <Route key={path} path={path} element={<Component/>} exact/>)

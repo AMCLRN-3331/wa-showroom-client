@@ -30,12 +30,16 @@ const Catalog = observer(() => {
 
 
     return (
-        <div style={{marginTop: '150px', marginBottom: '150px'}}>
+        
+        <div style={{marginTop: '100px', marginBottom: '150px'}}>
+            <div style={{marginLeft: '50px'}}>
+            <h5>Выберите свой автомобиль.</h5>
             <Row>
-                <Col md={3}>
+                <Row md={3}>
                     <BrandBar />
-                </Col>
+                </Row>
             </Row>
+            </div>
             <AutoList />
             <Pages />
         </div>

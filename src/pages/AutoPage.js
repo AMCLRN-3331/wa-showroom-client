@@ -18,7 +18,6 @@ const AutoPage = observer(() => {
         // fetchColorsForAuto(id).then(data => setColors(data));
     }, []);
     
-
     return (
         <OneAuto auto={auto} />
        

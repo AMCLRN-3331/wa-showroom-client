@@ -3,10 +3,10 @@ import { Button, Row } from "react-bootstrap";
 
 const ShortAbout = () => {
   return (
-    <Row md={3} className="short-about d-flex">
+    <Row md={3} className="short-about">
       <div
         className="short-about-item"
-        style={{ background: "url(http://localhost:7000/glav-car.png)" }}
+        style={{ background: "url(http://31.129.99.186:7000/0bf55bf5-2293-41ff-8398-56b0e40ba86c.jpg)" }}
       ></div>
       <div className="short-about-item">
         <h1 className="h1About">

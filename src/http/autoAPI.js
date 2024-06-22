@@ -6,9 +6,11 @@ export const fetchBrands = async () => {
 }
 
 export const fetchAutos = async (brandId, modelId, page, limit) => {
-    const { data } = await $host.get('api/auto', {params: {
-        brandId, modelId, page, limit
-    }});
+    const { data } = await $host.get('api/auto', {
+        params: {
+            brandId, modelId, page, limit
+        }
+    });
     return data;
 }
 
@@ -22,7 +24,7 @@ export const fetchBodies = async () => {
     return data;
 }
 
-export const fetchBookings = async () =>{
+export const fetchBookings = async () => {
     const { data } = await $authHost.get('api/booking');
     return data;
 }
@@ -78,7 +80,17 @@ export const createGearboxes = async (gearbox) => {
     return data;
 }
 
-export const createBooking = async (booking)=>{
+export const createBooking = async (booking) => {
     const { data } = await $host.post('api/booking', booking);
     return data;
 }
+
+export const createOrder = async (order) => {
+    const {data} = await $host.post('api/booking/order', order);
+    return data;
+}
+
+export const fetchOrders = async () => {
+    const { data } = await $authHost.get('api/booking/order');
+    return data;
+} 

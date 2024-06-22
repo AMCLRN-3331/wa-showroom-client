@@ -1,0 +1,48 @@
+.short-spec {
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 100px;
+  background-color: #282828;
+  padding: 2%;
+}
+.short-spec-item {
+  height: 500px;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding: 10px;
+  display: flex;
+  align-items: flex-end;
+  width: 20%;
+}
+
+.h3S {
+  color: white;
+}
+.pS {
+  color: white;
+}
+
+/* .short-spec-item:hover {
+  height: 500px;
+} */
+
+@media (max-width: 992px) {
+  .short-spec {
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: #282828;
+    flex-direction: column;
+  }
+  .short-spec-item {
+    height: 350px;
+    width: 90%;
+    background-size: cover !important;
+    padding: 0px;
+    display: flex;
+    align-items: flex-end;
+    margin: 25px 5% !important;
+  }
+  .head-title-spec{
+    padding: 10px;
+  }
+}

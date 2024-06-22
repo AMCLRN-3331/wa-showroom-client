@@ -5,11 +5,20 @@ import About from './pages/About';
 import AutoPage from './pages/AutoPage';
 import Catalog from './pages/Catalog';
 import License from './pages/License';
+import { Component } from 'react';
+import Spec from './pages/Spec';
 
 export const authRoutes = [
     {
         path: '/admin',
         Component: Admin
+    }
+];
+
+export const specRoutes = [
+    {
+        path: '/spec',
+        Component: Spec
     }
 ];
 

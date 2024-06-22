@@ -1,0 +1,13 @@
+.container-booking.container{
+    /* margin: auto; */
+    padding: 5%;
+}
+.h1Booking{
+    margin-bottom: 5%;
+    display: flex;
+    justify-content: center;
+}
+.inputB{
+    height: 70px;
+    margin: 2%;
+}
